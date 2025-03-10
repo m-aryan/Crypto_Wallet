@@ -12,7 +12,7 @@ public class HomeController {
         return "Welcome to Trading Platform";
     }
 
-    // This is to test if AppConfig.java is working or not.
+    // This is to test if JwtTokenValidator bug resolved or not.
     @GetMapping("/api")
     public String secure() {
         return "Welcome to Trading Platform Secured";
