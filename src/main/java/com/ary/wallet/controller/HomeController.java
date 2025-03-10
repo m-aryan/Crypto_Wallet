@@ -11,4 +11,10 @@ public class HomeController {
     public String home() {
         return "Welcome to Trading Platform";
     }
+
+    // This is to test if AppConfig.java is working or not.
+    @GetMapping("/api")
+    public String secure() {
+        return "Welcome to Trading Platform Secured";
+    }
 }
