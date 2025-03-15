@@ -75,6 +75,15 @@ public class AuthController {
 
         String jwt = JwtProvider.generateToken(auth);
 
+        // Checking if Two-Factor Authentication is True/False
+        if (user.getTwoFactorAuth().isEnabled()){
+            AuthResponse res = new AuthResponse();
+            res.setMessage("Two-Factor Authentication Enabled");
+            res.setTwoFactorAuthEnabled(true);
+
+            // Generating OTP
+        }
+
         AuthResponse res = new AuthResponse();
         res.setJwt(jwt);
         res.setStatus(true);
