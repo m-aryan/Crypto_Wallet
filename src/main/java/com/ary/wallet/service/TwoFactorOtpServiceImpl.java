@@ -51,6 +51,6 @@ public class TwoFactorOtpServiceImpl implements TwoFactorOtpService{
 
     @Override
     public void deleteTwoFactorOtp(TwoFactorOTP twoFactorOTP) {
-        twoFactorOtpRepository.delete(twoFactorOTP);
+        twoFactorOtpRepository.delete(twoFactorOTP) ;
     }
 }
