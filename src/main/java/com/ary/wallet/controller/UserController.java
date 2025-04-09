@@ -116,14 +116,12 @@ public class UserController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-
     // End Point to Verify OTP and Reset the Password
     @PatchMapping("/auth/users/reset-password/verify-otp")
     public ResponseEntity<ApiResponse> resetPassword(
             @RequestParam String id,
             @RequestBody ResetPasswordRequest req,
             @RequestHeader("Authorization") String jwt) throws Exception {
-
 
         ForgotPasswordToken forgotPasswordToken = forgotPasswordService.findById(id);
 
